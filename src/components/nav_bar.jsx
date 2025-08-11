@@ -22,7 +22,7 @@ export const NavBar = () => {
     }, []);
 
     const on_update_active_link = (value) => {
-        set_active_link(value);
+        set_active_link(value); // Atualiza o estado com o link clicado
     };
 
     return (
@@ -33,18 +33,17 @@ export const NavBar = () => {
                 <img src="" alt="Logo" />
             </Navbar.Brand>
 
-            <Navbar.Toggle aria-controls="basic-navbar-nav">
-                <span className="navbar-toggler-icon"></span>
+            <Navbar.Toggle aria-controls="basic-navbar-nav"> {/* Cria o botão hambúrguer que aparece quando a barra está colapsada */}
+                <span className="navbar-toggler-icon"></span> {/* O atributo aria-controls indica qual elemento será aberto/fechado */}
             </Navbar.Toggle>
 
+            {/* É a área que será mostrada ou escondida quando o usuário clicar no botão hambúrguer */}
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="ms-auto">
                 <Nav.Link
                     href="#"
                     className={
-                    active_link === "home"
-                        ? "active navbar-link"
-                        : "navbar-link"
+                    active_link === "home" ? "active navbar-link" : "navbar-link"
                     }
                     onClick={() => on_update_active_link("home")}
                 >
@@ -54,9 +53,7 @@ export const NavBar = () => {
                 <Nav.Link
                     href="#"
                     className={
-                    active_link === "skills"
-                        ? "active navbar-link"
-                        : "navbar-link"
+                    active_link === "skills" ? "active navbar-link" : "navbar-link"
                     }
                     onClick={() => on_update_active_link("skills")}
                 >
@@ -66,9 +63,7 @@ export const NavBar = () => {
                 <Nav.Link
                     href="#"
                     className={
-                    active_link === "projects"
-                        ? "active navbar-link"
-                        : "navbar-link"
+                    active_link === "projects" ? "active navbar-link" : "navbar-link"
                     }
                     onClick={() => on_update_active_link("projects")}
                 >
