@@ -1,47 +1,103 @@
-import {useState, useEffect} from "react"; // Hooks do react
-import {Navbar, Nav, Container} from "react-bootstrap"; // Componentes do react-Bootstrap utilizados na barra de navegação
-import {HashLink} from "react=router-hash-link"; // HashLink para navegação com âncoras suaves (scroll suave)
-import {BrowserRouter as Router} from "react-router-dom"; // Importa o Router do React Router
+import { useState, useEffect } from "react"; // Hooks do React (npm install react-router-hash-link)
+import { Navbar, Nav, Container } from "react-bootstrap"; // Componentes do React-Bootstrap
+import { HashLink } from "react-router-hash-link"; // HashLink correto
+import { BrowserRouter as Router } from "react-router-dom"; // Router do React Router
 
 export const NavBar = () => {
-    const [active_link, set_active_link] = useState("home"); // Estado que controla qual link da navbar está ativo
-    const [scrolled, set_scrolled] = useState(false); // Estado que indica se a navbar está "rolada", para aplicar um estilo
+    const [active_link, set_active_link] = useState("home"); // Link ativo
+    const [scrolled, set_scrolled] = useState(false); // Navbar rolada
 
     useEffect(() => {
         const on_scroll = () => {
-            // Se o usuário rolar mais de 50px, muda o estado para aplicar uma classe CSS
-            if (window.scrollY > 50) {
-                set_scrolled(true);
-            } else {
-                set_scrolled(false);
-            }
+        if (window.scrollY > 50) {
+            set_scrolled(true);
+        } else {
+            set_scrolled(false);
         }
+        };
 
-        window.addEventListener("scroll", on_scroll); // Adiciona o evento de scroll ao carregar o componente
+        window.addEventListener("scroll", on_scroll);
 
-        return () => window.removeEventListener("scroll", onscroll); // Remove o evento quando o componente for desmontado
-
-    }, [])
+        return () => window.removeEventListener("scroll", on_scroll);
+    }, []);
 
     const on_update_active_link = (value) => {
-        set_active_link(value); // Atualiza o estado com o link clicado
-    }
+        set_active_link(value);
+    };
 
     return (
-        <Router> {/* Envolve a navbar com o Router para permitir navegação */}
-            <NavBar expand="md" className={scrolled ? "scrolled" : ""}>
-                <Container>
-                    <Navbar.Brand href="/"> {/* Logo com link para o topo ou home */}
-                        <img src={""} alt="Logo"/>
-                    </Navbar.Brand>
+        <Router>
+        <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
+            <Container>
+            <Navbar.Brand href="/">
+                <img src="" alt="Logo" />
+            </Navbar.Brand>
 
-                    {/* Botão de menu colapsável para telas pequenas */}
-                    <Navbar.Toggle aria-controls="basic-navbar-nav">
-                        <span className="navbar-toggler-icon"></span>
-                    </Navbar.Toggle>
+            <Navbar.Toggle aria-controls="basic-navbar-nav">
+                <span className="navbar-toggler-icon"></span>
+            </Navbar.Toggle>
 
-                </Container>
-            </NavBar>
+            <Navbar.Collapse id="basic-navbar-nav">
+                <Nav className="ms-auto">
+                <Nav.Link
+                    href="#"
+                    className={
+                    active_link === "home"
+                        ? "active navbar-link"
+                        : "navbar-link"
+                    }
+                    onClick={() => on_update_active_link("home")}
+                >
+                    Home
+                </Nav.Link>
+
+                <Nav.Link
+                    href="#"
+                    className={
+                    active_link === "skills"
+                        ? "active navbar-link"
+                        : "navbar-link"
+                    }
+                    onClick={() => on_update_active_link("skills")}
+                >
+                    Skills
+                </Nav.Link>
+
+                <Nav.Link
+                    href="#"
+                    className={
+                    active_link === "projects"
+                        ? "active navbar-link"
+                        : "navbar-link"
+                    }
+                    onClick={() => on_update_active_link("projects")}
+                >
+                    Projects
+                </Nav.Link>
+                </Nav>
+
+                <span className="navbar-text">
+                <div className="social-icon">
+                    <a href="#">
+                    <img src="" alt="" />
+                    </a>
+                    <a href="#">
+                    <img src="" alt="" />
+                    </a>
+                    <a href="#">
+                    <img src="" alt="" />
+                    </a>
+                </div>
+
+                <HashLink to="#connect">
+                    <button className="vvd">
+                    <span>Let's Connect</span>
+                    </button>
+                </HashLink>
+                </span>
+            </Navbar.Collapse>
+            </Container>
+        </Navbar>
         </Router>
-    )
-}
+    );
+    };
