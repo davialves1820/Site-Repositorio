@@ -14,7 +14,7 @@ export const Banner = () => {
     const [index, setIndex] = useState(1); // Índice da letra atual (usado no efeito de digitação)
 
     // Palavras que serão rotacionadas na animação
-    const toRotate = ["Web Developer", "Web Designer", "UI/UX Designer"];
+    const toRotate = ["Web Developer", "SoftWare Engineer"];
     const period = 2000; // Tempo de espera ao final da digitação antes de apagar
 
     // Hook useEffect que atualiza o texto de forma periódica
@@ -72,7 +72,7 @@ export const Banner = () => {
                 <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                     <span className="tagline">Welcome to my Portfolio</span>
                     <h1>
-                    {`Hi! I'm Judy`}{" "}
+                    {`Hi! I'm Davi`}{" "}
                     <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Web Developer", "Web Designer", "UI/UX Designer" ]'>
                         <span className="wrap">{text}</span> {/* Mostra o texto que está sendo animado */}
                     </span>
@@ -93,7 +93,7 @@ export const Banner = () => {
                 <TrackVisibility>
                 {({ isVisible }) =>
                     <div className={isVisible ? "animate__animated animate__zoomIn" : ""}>
-                    <img src={headerImg} alt="Header Img" /> {/* Exibe a imagem do cabeçalho */}
+                    <img src="" alt="Header Img" /> {/* Exibe a imagem do cabeçalho */}
                     </div>}
                 </TrackVisibility>
             </Col>
