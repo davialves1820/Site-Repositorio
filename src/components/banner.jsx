@@ -4,6 +4,7 @@ import { Container, Row, Col } from "react-bootstrap"; // Layout responsivo do B
 import { ArrowRightCircle } from 'react-bootstrap-icons'; // Ícone de seta
 import 'animate.css'; // Biblioteca de animações CSS
 import TrackVisibility from 'react-on-screen'; // Componente que detecta quando algo está visível na tela
+import personagem from "../assets/img/personagem.png"
 
 export const Banner = () => {
     // Estados para controlar a animação de digitação
@@ -60,7 +61,6 @@ export const Banner = () => {
         }
     }
 
-    // JSX de retorno: define a estrutura visual da seção "banner"
     return (
         <section className="banner" id="home">
         <Container>
@@ -93,7 +93,7 @@ export const Banner = () => {
                 <TrackVisibility>
                 {({ isVisible }) =>
                     <div className={isVisible ? "animate__animated animate__zoomIn" : ""}>
-                    <img src="" alt="Header Img" /> {/* Exibe a imagem do cabeçalho */}
+                    <img src={personagem} alt="Header Img" /> {/* Exibe a imagem do cabeçalho */}
                     </div>}
                 </TrackVisibility>
             </Col>

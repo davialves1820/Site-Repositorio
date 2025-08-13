@@ -3,6 +3,10 @@ import { Navbar, Nav, Container } from "react-bootstrap"; // Componentes do Reac
 import { HashLink } from "react-router-hash-link"; // HashLink correto
 import { BrowserRouter as Router } from "react-router-dom"; // Router do React Router
 
+import logo from "../assets/img/logo.svg";
+import instagram_icon from "../assets/img/instagram.svg";
+import linkedin_icon from "../assets/img/linkedin.svg";
+
 export const NavBar = () => {
     const [active_link, set_active_link] = useState("home"); // Link ativo
     const [scrolled, set_scrolled] = useState(false); // Navbar rolada
@@ -30,7 +34,7 @@ export const NavBar = () => {
         <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
             <Container>
             <Navbar.Brand href="/">
-                <img src="" alt="Logo" />
+                <img src={logo} alt="Logo" />
             </Navbar.Brand>
 
             <Navbar.Toggle aria-controls="basic-navbar-nav"> {/* Cria o botão hambúrguer que aparece quando a barra está colapsada */}
@@ -74,13 +78,10 @@ export const NavBar = () => {
                 <span className="navbar-text">
                 <div className="social-icon">
                     <a href="#">
-                    <img src="" alt="" />
+                    <img src={linkedin_icon} alt="" />
                     </a>
                     <a href="#">
-                    <img src="" alt="" />
-                    </a>
-                    <a href="#">
-                    <img src="" alt="" />
+                    <img src={instagram_icon} alt="" />
                     </a>
                 </div>
 
