@@ -11,6 +11,7 @@ export const NavBar = () => {
     const [active_link, set_active_link] = useState("home"); // Link ativo
     const [scrolled, set_scrolled] = useState(false); // Navbar rolada
 
+    // Hook useEffect para verificar a rolagem da tela e aplicar classe css
     useEffect(() => {
         const on_scroll = () => {
         if (window.scrollY > 50) {
