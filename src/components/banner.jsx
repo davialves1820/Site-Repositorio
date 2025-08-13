@@ -8,14 +8,14 @@ import personagem from "../assets/img/personagem.png"
 
 export const Banner = () => {
     // Estados para controlar a animação de digitação
-    const [loopNum, setLoopNum] = useState(0); // Controla qual palavra do array está sendo exibida
-    const [isDeleting, setIsDeleting] = useState(false); // Indica se estamos apagando o texto
-    const [text, setText] = useState(''); // Texto atual exibido
-    const [delta, setDelta] = useState(300 - Math.random() * 100); // Intervalo de tempo entre cada letra
-    const [index, setIndex] = useState(1); // Índice da letra atual (usado no efeito de digitação)
+    const [loop_num, set_loop_num] = useState(0); // Controla qual palavra do array está sendo exibida
+    const [is_deleting, set_is_deleting] = useState(false); // Indica se estamos apagando o texto
+    const [text, set_text] = useState(''); // Texto atual exibido
+    const [delta, set_delta] = useState(300 - Math.random() * 100); // Intervalo de tempo entre cada letra
+    const [index, set_index] = useState(1); // Índice da letra atual (usado no efeito de digitação)
 
     // Palavras que serão rotacionadas na animação
-    const toRotate = ["Web Developer", "SoftWare Engineer"];
+    const to_rotate = ["Web Developer", "SoftWare Engineer"];
     const period = 2000; // Tempo de espera ao final da digitação antes de apagar
 
     // Hook useEffect que atualiza o texto de forma periódica
@@ -30,34 +30,34 @@ export const Banner = () => {
 
     // Função que implementa o efeito de digitação/apagamento
     const tick = () => {
-        let i = loopNum % toRotate.length; // Escolhe qual palavra está sendo exibida
-        let fullText = toRotate[i]; // Palavra atual
-        let updatedText = isDeleting
+        let i = loop_num % to_rotate.length; // Escolhe qual palavra está sendo exibida
+        let fullText = to_rotate[i]; // Palavra atual
+        let updated_text = is_deleting
         ? fullText.substring(0, text.length - 1) // Apaga uma letra
         : fullText.substring(0, text.length + 1); // Adiciona uma letra
 
-        setText(updatedText); // Atualiza o texto
+        set_text(updated_text); // Atualiza o texto
 
         // Se estiver apagando, acelera o intervalo
-        if (isDeleting) {
-        setDelta(prevDelta => prevDelta / 2);
+        if (is_deleting) {
+        set_delta(prevDelta => prevDelta / 2);
         }
 
         // Se terminou de digitar a palavra completa
-        if (!isDeleting && updatedText === fullText) {
-        setIsDeleting(true); // Começa a apagar
-        setIndex(prevIndex => prevIndex - 1); // Ajusta o índice
-        setDelta(period); // Espera um tempo antes de apagar
+        if (!is_deleting && updated_text === fullText) {
+        set_is_deleting(true); // Começa a apagar
+        set_index(prevIndex => prevIndex - 1); // Ajusta o índice
+        set_delta(period); // Espera um tempo antes de apagar
         }
         // Se terminou de apagar tudo
-        else if (isDeleting && updatedText === '') {
-        setIsDeleting(false); // Começa a digitar a próxima
-        setLoopNum(loopNum + 1); // Passa para a próxima palavra
-        setIndex(1); // Reinicia o índice
-        setDelta(500); // Define um novo tempo de digitação
+        else if (is_deleting && updated_text === '') {
+        set_is_deleting(false); // Começa a digitar a próxima
+        set_loop_num(loop_num + 1); // Passa para a próxima palavra
+        set_index(1); // Reinicia o índice
+        set_delta(500); // Define um novo tempo de digitação
         }
         else {
-        setIndex(prevIndex => prevIndex + 1); // Continua o efeito
+        set_index(prevIndex => prevIndex + 1); // Continua o efeito
         }
     }
 
