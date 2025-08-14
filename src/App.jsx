@@ -9,6 +9,8 @@ function App() {
         <NavBar/> {/* Renderiza a barra de navegação */}
         
         <Banner/>
+
+
     </div>
   )
 }
