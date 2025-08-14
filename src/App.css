@@ -32,7 +32,7 @@ body {
   overflow-x: hidden;
   position: relative;
   background-color: #121212 !important;
-  color: #fff !important;
+  color: #FFF !important;
   font-family: 'Centra', sans-serif !important;
 }
 
@@ -296,11 +296,13 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .banner p {
-  color: white;
+  color: #FFF;
   font-size: 18px;
   letter-spacing: 0.8px;
   line-height: 1.5em;
   width: 96%;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
+  background-color: rgba(0,0,0,0.3); border-radius: 5px; padding: 5px;
 }
 
 .banner button {
@@ -627,6 +629,15 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
+  background: linear-gradient(
+  90.21deg,
+  rgba(54, 170, 189, 0.5) -5.91%,   /* azul esverdeado */
+  rgba(47, 74, 189, 0.5) 111.58%    /* azul profundo */
+);
+}
+
+.footer .social-icon {
+  margin-top: 10px;
 }
 
 .newsletter-bx {
