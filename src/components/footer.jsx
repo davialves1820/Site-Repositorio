@@ -8,7 +8,7 @@ export const Footer = () => {
         <footer className="footer"> {/* Define o rodapé do site */}
         <Container> {/* Componente Bootstrap que centraliza e limita a largura */}
             <Row className="align-items-center"> {/* Alinha verticalmente os elementos */}
-            
+
             {/* Coluna da logo */}
             <Col size={12} sm={6}> {/* Em telas pequenas ocupa 6 das 12 colunas (metade) */}
                 <img src={logo} alt="Logo" /> {/* Exibe o logo da aplicação */}

@@ -1,7 +1,7 @@
 import './App.css';
 import { NavBar } from "./components/nav_bar";
 import {Banner} from "./components/banner";
-import {EmailForm} from "./components/email_form"
+import {Contact} from "./components/contact";
 import { Footer } from './components/footer';
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
         
         <Banner/>
 
-        <EmailForm/>
+        <Contact/>
 
         <Footer/>
     </div>

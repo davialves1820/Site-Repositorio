@@ -48,7 +48,7 @@ async function email_exist(email, sheets) {
 app.post("/add-email", async (req, res) => {
     console.log("Body recebido:", req.body); // Mostra os dados recebidos no console
     
-    const { email, nome } = req.body; // Desestrutura email e nome do corpo da requisição
+    const { email, first_name, last_name, telefone, descricao } = req.body; // Desestrutura email e nome do corpo da requisição
     
     // Valida o formato do e-mail
     if (!is_valid_email(email)) {
@@ -68,10 +68,10 @@ app.post("/add-email", async (req, res) => {
         // Adiciona o e-mail, nome e data/hora na planilha (colunas A, B e C)
         await sheets.spreadsheets.values.append({
             spreadsheetId,
-            range: "A:C",
+            range: "A:F",
             valueInputOption: "RAW",
             resource: {
-                values: [[email, nome, new Date().toISOString()]],
+                values: [[email, first_name, last_name, telefone, descricao, new Date().toISOString()]],
             },
         });
         
