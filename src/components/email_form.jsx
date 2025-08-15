@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function EmailForm() {
+export const EmailForm = () =>  {
     const [email, setEmail] = useState("");
     const [nome, setNome] = useState("");
     const [status, setStatus] = useState("");
@@ -9,17 +9,18 @@ export default function EmailForm() {
         e.preventDefault();
 
         try {
-        const res = await fetch("http://localhost:5000/add-email", {
-            method: "POST",
-            body: JSON.stringify({ email, nome }),
-        });
+            const res = await fetch("http://localhost:5000/add-email", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ email, nome }),
+            });
 
-        const data = await res.json();
-        setStatus(data.message);
-        setEmail("");
-        setNome("");
+            const data = await res.json();
+            setStatus(data.message);
+            setEmail("");
+            setNome("");
         } catch (error) {
-        setStatus("Erro ao enviar!");
+            setStatus("Erro ao enviar!");
         }
     };
 

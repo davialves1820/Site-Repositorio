@@ -2,24 +2,24 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const { google } = require("googleapis");
-const keys = require("./credentials.json"); // JSON baixado
+const keys = require("../backend/credentials.json"); // JSON baixado
 
 const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
 // Configuração Google Sheets
-const client = new google.auth.JWT(
-    keys.client_email,
-    null,
-    keys.private_key,
-    ["https://www.googleapis.com/auth/spreadsheets"]
-);
+const client = new google.auth.JWT({
+    email: keys.client_email,
+    key: keys.private_key,
+    scopes: ["https://www.googleapis.com/auth/spreadsheets"]
+});
 
 const spreadsheetId = "1LVh2ApF6tCoj9wkAOIgPlOCg7MuRhY3p7e6HXgOFnK0"; // substitua pelo ID da sua planilha
 
 // Rota para receber e-mails
 app.post("/add-email", async (req, res) => {
+    console.log("Body recebido:", req.body);
     const { email, nome } = req.body;
     try {
         await client.authorize();
