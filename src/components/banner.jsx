@@ -79,9 +79,17 @@ export const Banner = () => {
                     I'm 20 years old, from Paraíba, and currently studying Computer Science at UFPB. I'm passionate about technology and programming, always seeking to expand my knowledge and develop creative solutions that make an impact.
                     </p>
                     {/* Botão com ícone */}
-                    <button onClick={() => console.log('connect')}>
-                    Let’s Connect <ArrowRightCircle size={25} />
+                    <button
+                        onClick={() => {
+                            const section = document.getElementById("connect");
+                            if (section) {
+                            section.scrollIntoView({ behavior: "smooth" }); // Rolagem suave
+                            }
+                        }}
+                        >
+                        Let’s Connect <ArrowRightCircle size={25} />
                     </button>
+
                 </div>}
                 </TrackVisibility>
             </Col>
