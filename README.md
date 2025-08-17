@@ -91,7 +91,3 @@ Para rodar este projeto localmente, siga os passos abaixo:
         ```
 
 ---
-
-## 📄 Licença
-
-Este projeto é distribuído sob a licença **MIT**.
