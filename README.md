@@ -1,12 +1,97 @@
-# React + Vite
+# Meu Portfólio de Contato
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Banner do Portfólio](https://placehold.co/600x400/fff/000?text=Banner+do+Portf%C3%B3lio)
+![Seção de Contato](https://placehold.co/600x400/fff/000?text=Se%C3%A7%C3%A3o+de+Contato)
 
-Currently, two official plugins are available:
+Este projeto é um site de portfólio e contato pessoal, construído com foco em uma interface limpa e moderna. Ele serve como uma vitrine para o meu trabalho e permite que visitantes entrem em contato de forma fácil e direta.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 💻 Tecnologias Utilizadas
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* **Frontend:**
+    * React.js
+    * Vite
+    * CSS
+
+* **Backend:**
+    * Node.js
+    * Express
+    * Google Sheets API
+
+---
+
+## 🚀 Funcionalidades
+
+O projeto é dividido em componentes React para uma organização modular e fácil manutenção. As principais seções e suas funcionalidades são:
+
+* **`banner.jsx`**: A seção de destaque na parte superior do site, geralmente com uma saudação e uma introdução.
+* **`nav_bar.jsx`**: A barra de navegação que permite ao usuário se mover entre as seções do site.
+* **`contact.jsx`**: A seção "Fale Conosco", que contém um formulário para contato. Este formulário coleta o nome completo, e-mail, telefone e uma mensagem do usuário.
+* **`footer.jsx`**: O rodapé do site, contendo links sociais e informações adicionais.
+* **`projects.jsx`**: Uma seção para listar e exibir projetos. **(Ainda não implementada)**
+* **`skills.jsx`**: Uma seção para apresentar habilidades técnicas. **(Ainda não implementada)**
+
+**Atenção:** As seções **Projects** e **Skills** ainda não foram implementadas, mas a estrutura do projeto já está preparada para recebê-las.
+
+---
+
+## ⚙️ Backend: Node.js e Google Sheets API
+
+O backend do projeto é uma API RESTful construída com Node.js e Express. Sua principal função é processar os dados enviados pelo formulário de contato do front-end e armazená-los em uma planilha do Google Sheets.
+
+### Como funciona:
+
+1.  O servidor Node.js utiliza a biblioteca `googleapis` para se autenticar em uma planilha do Google Sheets através de uma **Service Account**.
+2.  Uma rota POST (`/add-email`) recebe os dados do formulário de contato.
+3.  O servidor realiza uma validação de e-mail para garantir que o formato está correto.
+4.  É feita uma verificação na planilha para evitar a duplicação de e-mails.
+5.  Se o e-mail for válido e não estiver duplicado, os dados (e-mail, nome, telefone, mensagem e data/hora) são anexados a uma nova linha na planilha.
+6.  O servidor retorna uma resposta de sucesso ou erro para o front-end, que exibe uma mensagem para o usuário.
+
+Esta abordagem elimina a necessidade de um banco de dados tradicional, utilizando uma ferramenta familiar e de fácil acesso como o Google Sheets para gerenciar os contatos.
+
+---
+
+## 📦 Como Executar o Projeto
+
+Para rodar este projeto localmente, siga os passos abaixo:
+
+1.  **Clone o repositório:**
+    ```bash
+    git clone [https://docs.github.com/articles/referencing-and-citing-content](https://docs.github.com/articles/referencing-and-citing-content)
+    cd nome-do-projeto
+    ```
+
+2.  **Instale as dependências:**
+    * Para o frontend:
+        ```bash
+        cd caminho/para/o/frontend
+        npm install
+        ```
+    * Para o backend:
+        ```bash
+        cd caminho/para/o/backend
+        npm install
+        ```
+
+3.  **Configure o backend:**
+    * Crie um arquivo `credentials.json` no diretório `backend` com as credenciais da sua Service Account do Google. Certifique-se de compartilhar a planilha do Google Sheets com o e-mail da sua Service Account.
+
+4.  **Inicie o servidor de desenvolvimento:**
+    * Para o frontend:
+        ```bash
+        cd caminho/para/o/frontend
+        npm run dev
+        ```
+    * Para o backend:
+        ```bash
+        cd caminho/para/o/backend
+        node index.js
+        ```
+
+---
+
+## 📄 Licença
+
+Este projeto é distribuído sob a licença **MIT**.
