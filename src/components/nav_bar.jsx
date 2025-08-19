@@ -97,4 +97,4 @@ export const NavBar = () => {
         </Navbar>
         </Router>
     );
-    };
+};
