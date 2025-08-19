@@ -3,6 +3,7 @@ import { NavBar } from "./components/nav_bar";
 import {Banner} from "./components/banner";
 import {Contact} from "./components/contact";
 import { Footer } from './components/footer';
+import { Skills } from './components/skills';
 
 function App() {
 
@@ -11,6 +12,8 @@ function App() {
         <NavBar/> {/* Renderiza a barra de navegação */}
         
         <Banner/>
+
+        <Skills/>
 
         <Contact/>
 

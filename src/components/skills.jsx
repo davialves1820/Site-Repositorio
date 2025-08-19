@@ -7,20 +7,20 @@ export const Skills = () => {
     // Define configurações para responsividade
     const responsive = {
         // Telas muito grandes
-        super_large_desktop: {
-            breakepoint: { max: 4000, min: 3000},
+        superLargeDesktop: {
+            breakpoint: { max: 4000, min: 3000 },
             items: 5
         },
         desktop: {
-            breakepoint: { max: 3000, min: 1024},
+            breakpoint: { max: 3000, min: 1024 },
             items: 3
         },
         tablet: {
-            breakepoint: { max: 1024, min: 464},
+            breakpoint: { max: 1024, min: 464 },
             items: 2
         },
         mobile: {
-            breakepoint: { max: 464, min: 0},
+            breakpoint: { max: 464, min: 0 },
             items: 1
         }
     };
@@ -32,13 +32,52 @@ export const Skills = () => {
                     <div className="col-12">
                         <div className="skill-bx wow zoomIn">
                             <h2>Skills</h2>
-                            <p>adafdssnvsfvsnvnsfljvnsfjçlvnsfhvarhrbvhifsbviabhuibbo</p>
+                            <p>
+                                Essas são as linguagens de programação e as tecnologias que eu tenho conhecimento e alguma familiaridade.
+                            </p>
 
-                            <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
-
+                            <Carousel
+                                responsive={responsive}
+                                infinite={true}
+                                autoPlay={true}
+                                autoPlaySpeed={2000}
+                                className="owl-carousel owl-theme skill-slider"
+                            >
                                 <div className="item">
-                                    <img src="" alt="Image"/>
-                                    <h5>Web Development</h5>
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="HTML" />
+                                    <h5>HTML</h5>
+                                </div>
+                                <div className="item">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="CSS" />
+                                    <h5>CSS</h5>
+                                </div>
+                                <div className="item">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="JavaScript" />
+                                    <h5>JavaScript</h5>
+                                </div>
+                                <div className="item">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="React" />
+                                    <h5>React</h5>
+                                </div>
+                                <div className="item">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original-wordmark.svg" alt="React" />
+                                    <h5>Nodejs</h5>
+                                </div>
+                                <div className="item">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg" alt="React" />
+                                    <h5>C</h5>
+                                </div>
+                                <div className="item">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" alt="React" />
+                                    <h5>C++</h5>
+                                </div>
+                                <div className="item">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="React" />
+                                    <h5>Python</h5>
+                                </div>
+                                <div className="item">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" alt="React" />
+                                    <h5>Java</h5>
                                 </div>
 
                             </Carousel>
@@ -46,7 +85,6 @@ export const Skills = () => {
                     </div>
                 </div>
             </div>
-            
         </section>
     );
 };
