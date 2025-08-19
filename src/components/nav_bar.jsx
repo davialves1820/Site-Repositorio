@@ -56,7 +56,7 @@ export const NavBar = () => {
                 </Nav.Link>
 
                 <Nav.Link
-                    href="#"
+                    href="#skills"
                     className={
                     active_link === "skills" ? "active navbar-link" : "navbar-link"
                     }
