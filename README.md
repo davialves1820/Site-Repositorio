@@ -1,8 +1,5 @@
 # Meu Portfólio de Contato
 
-![Banner do Portfólio](https://placehold.co/600x400/fff/000?text=Banner+do+Portf%C3%B3lio)
-![Seção de Contato](https://placehold.co/600x400/fff/000?text=Se%C3%A7%C3%A3o+de+Contato)
-
 Este projeto é um site de portfólio e contato pessoal, construído com foco em uma interface limpa e moderna. Ele serve como uma vitrine para o meu trabalho e permite que visitantes entrem em contato de forma fácil e direta.
 
 ---
