@@ -26,8 +26,8 @@ O projeto é dividido em componentes React para uma organização modular e fác
 * **`nav_bar.jsx`**: A barra de navegação que permite ao usuário se mover entre as seções do site.
 * **`contact.jsx`**: A seção "Fale Conosco", que contém um formulário para contato. Este formulário coleta o nome completo, e-mail, telefone e uma mensagem do usuário.
 * **`footer.jsx`**: O rodapé do site, contendo links sociais e informações adicionais.
-* **`projects.jsx`**: Uma seção para listar e exibir projetos. **(Ainda não implementada)**
-* **`skills.jsx`**: Uma seção para apresentar habilidades técnicas. **(Ainda não implementada)**
+* **`projects.jsx`**: Uma seção para listar e exibir projetos.
+* **`skills.jsx`**: Uma seção para apresentar habilidades técnicas.
 
 **Atenção:** As seções **Projects** e **Skills** ainda não foram implementadas, mas a estrutura do projeto já está preparada para recebê-las.
 
