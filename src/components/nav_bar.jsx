@@ -66,7 +66,7 @@ export const NavBar = () => {
                 </Nav.Link>
 
                 <Nav.Link
-                    href="#"
+                    href=""
                     className={
                     active_link === "projects" ? "active navbar-link" : "navbar-link"
                     }
@@ -78,10 +78,10 @@ export const NavBar = () => {
 
                 <span className="navbar-text">
                 <div className="social-icon">
-                    <a href="#">
+                    <a href="https://www.linkedin.com/in/davi-rodrigues-36750b2a5/" target="_blank" rel="noopener noreferrer">
                     <img src={linkedin_icon} alt="" />
                     </a>
-                    <a href="#">
+                    <a href="https://www.instagram.com/davi_alves1820/" target="_blank" rel="noopener noreferrer">
                     <img src={instagram_icon} alt="" />
                     </a>
                 </div>
