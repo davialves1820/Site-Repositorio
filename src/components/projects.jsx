@@ -30,7 +30,20 @@ export const Project = () => {
                                                 <Nav.Link eventKey="first">Tab 1</Nav.Link>
                                             </Nav.Item>
                                         </Nav>
-                                        
+
+                                        <Tab.Container id="slideinUp" className={is_visivble ? "animate__animated animate__slideInUp" : ""}>
+                                            <Tab.Pane eventKey="first">
+                                                <Row>
+                                                    {
+                                                        projects.map((project, index) => (
+                                                            <ProjectCard key={index} {...project} />
+                                                        )) 
+                                                    }
+                                                </Row>
+                                            </Tab.Pane>
+
+                                            
+                                        </Tab.Container>
                                     </Tab.Container>
                                 </div>
                             } 
