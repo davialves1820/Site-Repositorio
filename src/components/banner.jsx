@@ -71,7 +71,7 @@ export const Banner = () => {
                     <span className="tagline">Welcome to my Portfolio</span>
                     <h1>
                     {`Hi! I'm Davi`}{" "}
-                    <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Web Developer", "Web Designer", "UI/UX Designer" ]'>
+                    <span className="txt-rotate" dataperiod="1000" data-rotate='[ "Web Developer", "Web Designer", "UI/UX Designer" ]'>
                         <span className="wrap">{text}</span> {/* Mostra o texto que está sendo animado */}
                     </span>
                     </h1>

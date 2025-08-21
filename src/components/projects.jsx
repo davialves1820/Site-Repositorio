@@ -2,13 +2,14 @@ import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { ProjectCard } from "./project_card";
 import TrackVisibility from "react-on-screen";
 import "animate.css";
+import project_img1 from "../assets/img/instagram.svg";
 
 export const Project = () => {
     const projects = [
         {
             title: "Otimization functions application",
             description: "Otimization algorotihms in a real problem",
-            img_url: "",
+            img_url: project_img1,
         }
     ];
 
@@ -18,8 +19,8 @@ export const Project = () => {
                 <Row>
                     <Col size={12}>
                         <TrackVisibility>
-                            {({is_visivble}) =>
-                                <div className={is_visivble ? "animate__animated animated__fadeIn" : ""}>
+                            {({isVisible}) =>
+                                <div className={isVisible ? "animate__animated animated__fadeIn" : ""}>
                                     <h2>Projects</h2>
 
                                     <p>jvanjnfnvjasnjawrfbsfhkbfshkvbafhbfkaufoabvsjhfskjhouwhuofbewobcoabncowhaouh</p>
@@ -31,7 +32,7 @@ export const Project = () => {
                                             </Nav.Item>
                                         </Nav>
 
-                                        <Tab.Container id="slideinUp" className={is_visivble ? "animate__animated animate__slideInUp" : ""}>
+                                        <Tab.Content id="slideinUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
                                             <Tab.Pane eventKey="first">
                                                 <Row>
                                                     {
@@ -42,8 +43,8 @@ export const Project = () => {
                                                 </Row>
                                             </Tab.Pane>
 
-                                            
-                                        </Tab.Container>
+
+                                        </Tab.Content>
                                     </Tab.Container>
                                 </div>
                             } 
