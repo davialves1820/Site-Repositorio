@@ -22,7 +22,7 @@ app.use(bodyParser.json()); // Configura o body-parser para aceitar requisiçõe
 // Configuração do cliente JWT para autenticação com Google Sheets
 const client = new google.auth.JWT({
     email: keys.client_email,       // E-mail da service account
-    key: keys.private_key,          // Chave privada da service account
+    key: keys.private_key,          // Chave privada da service account 
     scopes: [process.env.GOOGLE_SCOPES] // Permissão de acesso
 });
 
