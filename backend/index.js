@@ -10,6 +10,11 @@ const keys = require("../backend/credentials.json"); // Importa o arquivo de cre
 
 const app = express(); // Cria uma instância do Express
 
+const dotenv = require("dotenv");
+
+// Carrega variáveis do .env
+dotenv.config();
+
 app.use(cors()); // Ativa o CORS para permitir requisições de outros domínios
 
 app.use(bodyParser.json()); // Configura o body-parser para aceitar requisições JSON
@@ -18,11 +23,11 @@ app.use(bodyParser.json()); // Configura o body-parser para aceitar requisiçõe
 const client = new google.auth.JWT({
     email: keys.client_email,       // E-mail da service account
     key: keys.private_key,          // Chave privada da service account
-    scopes: ["https://www.googleapis.com/auth/spreadsheets"] // Permissão de acesso
+    scopes: [process.env.GOOGLE_SCOPES] // Permissão de acesso
 });
 
-// ID da planilha que será manipulada (substitua pelo seu ID real)
-const spreadsheetId = "1LVh2ApF6tCoj9wkAOIgPlOCg7MuRhY3p7e6HXgOFnK0"; 
+// ID da planilha que será manipulada
+const spreadsheetId = process.env.SPREADSHEET_ID; 
 
 // Função para validar se o e-mail está no formato correto
 function is_valid_email(email) {
