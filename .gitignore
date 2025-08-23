@@ -23,5 +23,6 @@ dist-ssr
 *.sln
 *.sw?
 
+# Arquivos com chaves de acesso
 backend/.env
 backend/credentials.json
