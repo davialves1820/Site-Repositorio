@@ -3,9 +3,11 @@ import { Navbar, Nav, Container } from "react-bootstrap"; // Componentes do Reac
 import { HashLink } from "react-router-hash-link"; // HashLink correto
 import { BrowserRouter as Router } from "react-router-dom"; // Router do React Router
 
-import logo from "../assets/img/logo.svg";
-import instagram_icon from "../assets/img/instagram.svg";
-import linkedin_icon from "../assets/img/linkedin.svg";
+import logo from "../../assets/img/logo.svg";
+import instagram_icon from "../../assets/img/instagram.svg";
+import linkedin_icon from "../../assets/img/linkedin.svg";
+
+import "../nav_bar/nav_bar.css"
 
 export const NavBar = () => {
     const [active_link, set_active_link] = useState("home"); // Link ativo

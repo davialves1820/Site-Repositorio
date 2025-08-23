@@ -4,7 +4,8 @@ import { ArrowRightCircle } from 'react-bootstrap-icons'; // Ícone de seta
 import 'animate.css'; // Biblioteca de animações CSS
 import TrackVisibility from 'react-on-screen'; // Componente que detecta quando algo está visível na tela
 
-import personagem from "../assets/img/personagem.png" // Imagem do personagem
+import personagem from "../../assets/img/personagem.png" // Imagem do personagem
+import "../banner/banner.css"
 
 export const Banner = () => {
     // Estados para controlar a animação de digitação

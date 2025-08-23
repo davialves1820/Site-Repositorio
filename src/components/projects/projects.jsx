@@ -3,8 +3,9 @@ import { ProjectCard } from "./project_card"; // Importa o componente de cartão
 import TrackVisibility from "react-on-screen"; // Importa componente para detectar visibilidade de elementos na tela
 import "animate.css"; // Importa animação CSS
 
+import "../projects/projects.css"
 // Importa imagens
-import project_img1 from "../assets/img/instagram.svg";
+import project_img1 from "../../assets/img/instagram.svg";
 
 export const Project = () => {
 

@@ -2,7 +2,9 @@ import { useState, useEffect } from "react";
 import { Container, Row, Col, Alert } from "react-bootstrap";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
-import contact_img from "../assets/img/contact-img.svg"
+import contact_img from "../../assets/img/contact-img.svg"
+
+import "../contact/contact.css"
 
 export const Contact = () => {
     // Estado para os campos do formulário

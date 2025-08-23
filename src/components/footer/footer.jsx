@@ -1,7 +1,8 @@
 import { Container, Row, Col } from "react-bootstrap"; // Layout responsivo do Bootstrap
-import logo from "../assets/img/logo.svg"; // Logo do site
-import instagram from "../assets/img/instagram.svg"; 
-import linkedin from "../assets/img/linkedin.svg"; 
+import logo from "../../assets/img/logo.svg"; // Logo do site
+import instagram from "../../assets/img/instagram.svg"; 
+import linkedin from "../../assets/img/linkedin.svg"; 
+import "../footer/footer.css"
 
 export const Footer = () => {
     return (

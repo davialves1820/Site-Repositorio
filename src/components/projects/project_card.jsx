@@ -1,4 +1,5 @@
 import { Col } from "react-bootstrap";
+import "../projects/projects.css"
 
 // Modelo de estrutura de um projeto
 export const ProjectCard = ({ title, description, img_url}) => {

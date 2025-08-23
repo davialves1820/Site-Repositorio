@@ -3,6 +3,8 @@ import Carousel from 'react-multi-carousel';
 // Importa o CSS padrão do Carousel
 import 'react-multi-carousel/lib/styles.css';
 
+import "../skills/skills.css"
+
 export const Skills = () => {
     // Define configurações para responsividade
     const responsive = {

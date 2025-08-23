@@ -1,10 +1,10 @@
 import './App.css';
-import { NavBar } from "./components/nav_bar";
-import { Banner } from "./components/banner";
-import { Contact } from "./components/contact";
-import { Footer } from './components/footer';
-import { Skills } from './components/skills';
-import { Project } from './components/projects';
+import { NavBar } from "./components/nav_bar/nav_bar";
+import { Banner } from "./components/banner/banner";
+import { Contact } from "./components/contact/contact";
+import { Footer } from './components/footer/footer';
+import { Skills } from './components/skills/skills';
+import { Project } from './components/projects/projects';
 
 function App() {
 
