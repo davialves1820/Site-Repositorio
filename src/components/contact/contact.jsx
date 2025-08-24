@@ -75,7 +75,7 @@ export const Contact = () => {
                     {({ isVisible }) =>
                         <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                         <h2 style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-                            Fale Conosco
+                            Talk to me
                             {status.message && (
                                 <Alert variant={status.success ? "success" : "danger"} 
                                 style={{
