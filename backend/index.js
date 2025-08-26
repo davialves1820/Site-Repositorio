@@ -41,7 +41,7 @@ async function email_exist(email, sheets) {
     // Lê os valores da coluna B
     const res = await sheets.spreadsheets.values.get({
         spreadsheetId,
-        range: "B:B"
+        range: "A:A"
     });
 
     const emails = res.data.values ? res.data.values.flat() : []; // Flatten transforma array de arrays em array simples
