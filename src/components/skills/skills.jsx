@@ -35,7 +35,7 @@ export const Skills = () => {
                         <div className="skill-bx wow zoomIn">
                             <h2>Skills</h2>
                             <p>
-                                Essas são as linguagens de programação e as tecnologias que eu tenho conhecimento e alguma familiaridade.
+                                These are the programming languages and technologies that I am familiar with.
                             </p>
 
                             <Carousel
