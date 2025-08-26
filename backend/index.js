@@ -57,7 +57,7 @@ app.post("/add-email", async (req, res) => {
     
     // Valida o formato do e-mail
     if (!is_valid_email(email)) {
-        return res.status(400).json({ status: "error", message: "Email inválido."});
+        return res.status(400).json({ status: "error", message: "Invalid email."});
     }
 
     try {
@@ -67,7 +67,7 @@ app.post("/add-email", async (req, res) => {
 
         // Verifica se o e-mail já existe na planilha
         if (await email_exist(email, sheets)) {
-            return res.status(400).json({ status: "error", message: "Email já existente."});
+            return res.status(400).json({ status: "error", message: "Email already exists."});
         }
 
         // Adiciona o e-mail, nome e data/hora na planilha (colunas A, B e C)
@@ -81,10 +81,10 @@ app.post("/add-email", async (req, res) => {
         });
         
         // Retorna sucesso para o cliente
-        res.json({ status: "success", message: "Email salvo com sucesso!" });
+        res.json({ status: "success", message: "Email saved successfully!" });
     } catch (err) {
         console.error(err); // Mostra erro no console
-        res.status(500).json({ status: "error", message: "Erro ao salvar email." }); // Retorna erro de servidor
+        res.status(500).json({ status: "error", message: "Error saving email." }); // Retorna erro de servidor
     }
 });
 
@@ -92,4 +92,4 @@ app.post("/add-email", async (req, res) => {
 const PORT = 5000; // Define a porta que o servidor vai rodar
 
 // Inicializa o servidor e exibe mensagem no console
-app.listen(PORT, () => console.log(`Servidor rodando na porta ${PORT}`));
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
