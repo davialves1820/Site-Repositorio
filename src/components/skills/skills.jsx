@@ -58,6 +58,10 @@ export const Skills = () => {
                                     <h5>JavaScript</h5>
                                 </div>
                                 <div className="item">
+                                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-plain.svg" alt="JavaScript" />
+                                    <h5>TypeScript</h5>
+                                </div>
+                                <div className="item">
                                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="React" />
                                     <h5>React</h5>
                                 </div>
@@ -80,6 +84,10 @@ export const Skills = () => {
                                 <div className="item">
                                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" alt="React" />
                                     <h5>Java</h5>
+                                </div>
+                                <div className="item">
+                                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-plain.svg" alt="React" />
+                                    <h5>Git</h5>
                                 </div>
 
                             </Carousel>
