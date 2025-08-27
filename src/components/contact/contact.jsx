@@ -9,7 +9,7 @@ import "../contact/contact.css"
 export const Contact = () => {
     // Estado para os campos do formulário
     const [form_details, set_form_details] = useState({ first_name: "", last_name: "", email: "", telefone: "", descricao: ""});
-    const [button_text, set_button_text] = useState('Enviar');
+    const [button_text, set_button_text] = useState('Send');
     const [status, set_status] = useState({});
 
     // Função para atualizar dinamicamente os campos do formulário, recebe o nome do campo (field) e o valor digitado (value)
@@ -21,7 +21,7 @@ export const Contact = () => {
     // Função assíncrona para enviar os dados para o backend
     const handle_submit = async (e) => {
         e.preventDefault(); // Evita o recarregamento da página ao enviar o formulário
-        set_button_text("Enviando..."); // Atualiza o texto do botão para indicar que está enviando
+        set_button_text("Sending..."); // Atualiza o texto do botão para indicar que está enviando
 
         try {
             // Faz uma requisição POST para o backend
@@ -33,7 +33,7 @@ export const Contact = () => {
 
             // Lê a resposta do backend já convertida em objeto
             const data = await res.json();
-            set_button_text("Enviar"); // Restaura o texto do botão para "Enviar"
+            set_button_text("Send"); // Restaura o texto do botão para "Enviar"
 
             if (res.ok) { // Se a resposta for OK (status 200-299), exibe mensagem de sucesso
                 set_status({ success: true, message: data.message });
@@ -43,8 +43,8 @@ export const Contact = () => {
             }
 
         } catch (err) { // Caso ocorra erro na comunicação (ex: servidor offline)
-            set_button_text("Enviar"); // Restaura o botão
-            set_status({ success: false, message: "Erro ao enviar!" }); // Mensagem genérica de erro
+            set_button_text("Send"); // Restaura o botão
+            set_status({ success: false, message: "Error sending!" }); // Mensagem genérica de erro
         }
     };
 
