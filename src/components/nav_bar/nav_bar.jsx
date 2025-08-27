@@ -6,6 +6,7 @@ import { BrowserRouter as Router } from "react-router-dom"; // Router do React R
 import logo from "../../assets/img/logo.svg";
 import instagram_icon from "../../assets/img/instagram.svg";
 import linkedin_icon from "../../assets/img/linkedin.svg";
+import github_icon from "../../assets/img/github.svg";
 
 import "../nav_bar/nav_bar.css"
 
@@ -81,10 +82,13 @@ export const NavBar = () => {
                 <span className="navbar-text">
                 <div className="social-icon">
                     <a href="https://www.linkedin.com/in/davi-rodrigues-36750b2a5/" target="_blank" rel="noopener noreferrer">
-                    <img src={linkedin_icon} alt="" />
+                    <img src={linkedin_icon} alt="linkedin icon" />
                     </a>
                     <a href="https://www.instagram.com/davi_alves1820/" target="_blank" rel="noopener noreferrer">
-                    <img src={instagram_icon} alt="" />
+                    <img src={instagram_icon} alt="instagram icon" />
+                    </a>
+                    <a href="https://github.com/davialves1820?tab=repositories" target="_blank" rel="noopener noreferrer">
+                    <img src={github_icon} alt="github icon" />
                     </a>
                 </div>
 
