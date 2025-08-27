@@ -1,6 +1,6 @@
 # Meu Portfólio de Contato
 
-Este projeto é um site de portfólio e contato pessoal, construído com foco em uma interface limpa e moderna. Ele serve como uma vitrine para o meu trabalho e permite que visitantes entrem em contato de forma fácil e direta.
+Este projeto é um site de portfólio e contato pessoal, construído com foco em uma interface limpa e moderna. O objetivo dele é mostrar um pouco do conhecimento na área, como linguagens, tecnologias e projetos.
 
 ---
 
@@ -28,8 +28,6 @@ O projeto é dividido em componentes React para uma organização modular e fác
 * **`footer.jsx`**: O rodapé do site, contendo links sociais e informações adicionais.
 * **`projects.jsx`**: Uma seção para listar e exibir projetos.
 * **`skills.jsx`**: Uma seção para apresentar habilidades técnicas.
-
-**Atenção:** As seções **Projects** e **Skills** ainda não foram implementadas, mas a estrutura do projeto já está preparada para recebê-las.
 
 ---
 
