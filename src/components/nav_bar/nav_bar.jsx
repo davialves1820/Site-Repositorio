@@ -31,6 +31,7 @@ export const NavBar = () => {
 
     const on_update_active_link = (value) => {
         set_active_link(value); // Atualiza o estado com o link clicado
+        console.log(value);
     };
 
     return (
@@ -69,7 +70,7 @@ export const NavBar = () => {
                 </Nav.Link>
 
                 <Nav.Link
-                    href=""
+                    href="#projects"
                     className={
                     active_link === "projects" ? "active navbar-link" : "navbar-link"
                     }
