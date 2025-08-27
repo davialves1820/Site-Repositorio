@@ -4,14 +4,26 @@ import TrackVisibility from "react-on-screen";
 import "animate.css"; 
 
 import "../projects/projects.css";
-import project_img1 from "../../assets/img/instagram.svg";
+import project_img1 from "../../assets/img/mapa_algoritmo_genetico.png";
+import project_img2 from "../../assets/img/Popular_movies.png";
+import project_img3 from "../../assets/img/avatar.png";
 
 export const Project = () => {
     const projects = [
         {
-        title: "Optimization functions application",
-        description: "Optimization algorithms in a real problem",
+        title: "Practical application of optimization functions",
+        description: "This project demonstrates the application of optimization algorithms to solve the Traveling Salesman Problem (TSP) in a real-world application in the city of João Pessoa, Paraíba. The objective is to find the shortest route to visit a set of tourist attractions and return to the starting point.The project uses the OSMnx library to model the city's street network as a graph. Three optimization algorithms—Hill Climbing, Simulated Annealing, and Genetic Algorithm—are implemented to find the most efficient route. The performance of each algorithm is compared to a random initial route, and the results are visualized on city maps.",
         imgUrl: project_img1,
+        },
+        {
+        title: "Popular Movies",
+        description: "A simple website that consumes the TMDb API to list popular movies, allows you to search by name and mark movies as favorites using localStorage.",
+        imgUrl: project_img2,
+        },
+        {
+        title: "Avatar Characters Viewer",
+        description: "A Django project that consumes the public API of the Avatar: The Last Airbender universe and displays a list of characters with their images, affiliations, allies, and enemies. It also allows you to search for characters by name.",
+        imgUrl: project_img3,
         },
     ];
 
@@ -30,7 +42,7 @@ export const Project = () => {
                         <h2>Projects</h2>
 
                         {/* Descrição da seção */}
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...</p>
+                        <p>Here you'll find some of my personal projects, designed to practice skills, explore new technologies, and put ideas into practice.</p>
 
                         {/* Container de abas (Tabs) para organizar o conteúdo */}
                         <Tab.Container id="projects-tabs" defaultActiveKey="first">
@@ -40,12 +52,7 @@ export const Project = () => {
                             <Nav.Item>
                                 <Nav.Link eventKey="first">Tab 1</Nav.Link> {/* Aba 1 */}
                             </Nav.Item>
-                            <Nav.Item>
-                                <Nav.Link eventKey="second">Tab 2</Nav.Link> {/* Aba 2 */}
-                            </Nav.Item>
-                            <Nav.Item>
-                                <Nav.Link eventKey="third">Tab 3</Nav.Link> {/* Aba 3 */}
-                            </Nav.Item>
+                            
                             </Nav>
 
                             {/* Conteúdo das abas */}
