@@ -2,6 +2,7 @@ import { Container, Row, Col } from "react-bootstrap"; // Layout responsivo do B
 import logo from "../../assets/img/logo.svg"; // Logo do site
 import instagram from "../../assets/img/instagram.svg"; 
 import linkedin from "../../assets/img/linkedin.svg"; 
+import github from "../../assets/img/github.svg";
 import "../footer/footer.css"
 
 export const Footer = () => {
@@ -19,8 +20,9 @@ export const Footer = () => {
             <Col size={12} sm={6} className="text-center text-sm-end">
                 <div className="social-icon">
                 {/* Ícones clicáveis que levam às redes sociais */}
-                <a href="#"><img src={linkedin} alt="Icon" /></a>
-                <a href="#"><img src={instagram} alt="Icon" /></a>
+                <a href="https://www.linkedin.com/in/davi-rodrigues-36750b2a5/"><img src={linkedin} alt="Icon" /></a>
+                <a href="https://www.instagram.com/davi_alves1820/"><img src={instagram} alt="Icon" /></a>
+                <a href="https://github.com/davialves1820?tab=repositories"><img src={github} alt="Icon" /></a>
                 </div>
                 {/* Texto de direitos autorais */}
                 <p>Copyright {new Date().getFullYear()}. All Rights Reserved</p>
